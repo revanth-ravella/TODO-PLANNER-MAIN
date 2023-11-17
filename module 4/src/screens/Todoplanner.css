@@ -1,0 +1,101 @@
+/* App.css */
+.App {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .task-list {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .task-add-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .task-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+  }
+  
+  .task-action-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  .added-date {
+    font-size: 13px;
+    color: #777;
+    margin-right: 10px;
+  }
+  
+  /* Define a fade-in animation for new tasks */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Apply the fade-in animation to new tasks */
+  .task-items li.adding-task {
+    animation: fade-in 0.3s ease-in-out;
+  }
+  
+  /* Define a slide-out animation for removed tasks */
+  @keyframes slide-out {
+    to {
+      opacity: 0;
+      max-height: 0;
+      padding: 0;
+    }
+  }
+  
+  /* Apply the slide-out animation to removed tasks */
+  .task-items li.removing-task {
+    animation: slide-out 0.3s ease-in-out;
+  }
+  
